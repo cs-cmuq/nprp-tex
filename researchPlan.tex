@@ -1,0 +1,642 @@
+\documentclass[a4paper,11pt]{nprp}
+%%% Important macros
+%
+% \PI: the name of the PI
+% \proposalNo: the number of the proposal
+% \draft: comment out to remove instructions
+%
+% \Part{xxx}: creates proposal part called xxx
+
+\newcommand{\PI}{}
+\newcommand{\proposalNo}{NPRP00X-0000-000000}
+\newcommand{\proposalTitle}{Project Title}
+
+\newcommand{\draft}{}  % Remove for final version
+
+\input{NPRP-macros}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{proof}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+%\usepackage{hyperref}           %must be last
+
+% For highlighting
+\usepackage{soul}
+\sethlcolor{yellow}
+
+\renewcommand{\contentsname}{Table of Contents}
+\newenvironment{OLD}{\color{red}}{\color{black}}
+
+% For tables
+\renewcommand{\arraystretch}{1.5}
+\newcolumntype{P}[1]{m{\dimexpr #1\textwidth-2\tabcolsep}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}P{#1}}
+\definecolor{headercolor}{gray}{.8}
+\colorlet{wpcolor}{blue!20}
+\colorlet{taskcolor}{red!20}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+
+\textbf{QNRF -- NATIONAL PRIORITY RESEARCH PROGRAM - STANDARD}
+
+\vspace{0.86in}
+
+\begin{tabular}{|m{2in}|m{4.6in}|}
+\hline
+\textbf{NPRP-S ID} & \proposalNo \\
+\hline
+\textbf{Project title in English} & \proposalTitle \\
+\hline
+\textbf{Project title in Arabic (optional)} & \\
+\hline
+\textbf{Type of Application} &
+  \begin{itemize}
+  \item[\radiobutton*] New
+  \item[\radiobutton] Resubmission
+  \item[\radiobutton] Renewal
+  \end{itemize} \\
+\hline
+\textbf{Type of Research} &
+  \begin{itemize}
+  \item[\radiobutton] Basic Research
+  \item[\radiobutton*] Applied Research
+  \item[\radiobutton] Experimental development / Translational Research
+  \end{itemize} \\
+\hline
+\textbf{Priority Theme} & \\
+\hline
+\textbf{Submitting Institution} & Carnegie Mellon University in Qatar \\
+\hline
+\textbf{Lead PI (title, name, position)} &  \\
+\hline
+\textbf{List of participants (PIs' names, collaborative institutions, PIs' residency)} &
+  \vspace{5pt}
+  \begin{tabular}{|p{1.3in}|p{1.3in}|p{1.3in}|}
+  \hline
+  PI name & PI institution & PI residency \\
+  \hline
+   &  & \\
+  \hline
+   &  & \\
+  \hline
+  \end{tabular}
+  \vspace{5pt} \\
+\hline
+\textbf{Co-Funding} &
+  \begin{itemize}
+  \item[\radiobutton] Yes
+
+  {\small (list co-funders here:)}
+  \item[\radiobutton*] No
+  \end{itemize} \\
+\hline
+\textbf{Total funding requested} &
+  \begin{tabular}{r|p{1.2in}|c}
+  42,424,242 USD & \textbf{Project duration} & 42 months
+  \end{tabular} \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\newpage
+%\pagestyletoc
+\pagestylebody
+\doublespacing
+\tableofcontents
+\singlespacing
+
+\instructions{Before submitting this document:
+  \begin{itemize}
+    \item Comment out the line defining the command \texttt{draft} to remove
+    the instructions.
+    \item This document must not exceed 40 pages excluding cover page, table of
+    contents and references, body of text in regular black Arial font size 11,
+    single space and the margins as identified in the template (no less than 0.5
+    inches).
+    \item Make sure that the information in the cover page above is matching the
+    information entered on QGrants.
+  \end{itemize}
+
+  The sections are MANDATORY (unless marked ``if applicable''). It is recommended
+  that proposals follow the sub-sections indicated in the template. However,
+  applicants are free to adapt the structure of the sub-sections according to
+  the project’s needs. Applications that do not comply with the instructions may
+  not be accepted for review.}
+
+\newpage
+%\pagestylebody
+\Part{Research Plan}
+
+\section{PROPOSAL SUMMARY}
+\label{sec:prop-summary}
+\instructions{Please describe in up to 6,000 characters the nature of the
+  proposed research. This should be in plain English and should cover the
+  following items: What are the scientific objectives and innovations of this
+  project? What does the project-team plan to do? How will the project-team do it?
+  What are the expected outcomes? What will be the expected impact of this
+  project?}
+
+\section{REBUTTAL (if applicable)}
+\instructions{If this proposal is a resubmission, include here the questions \&
+responses to previous peer reviewers' comments and identify the substantive
+changes incorporated in the research plan.  In addition, LPIs resubmitting
+proposals must point out in the body of this research plan (e.g. in bold type,
+line in the margin, underlining, italic, etc.) all revisions and modifications
+made in response to the PRs' comments.}
+
+\section{OBJECTIVES AND SIGNIFICANCE}
+\label{sec:objectives}
+\instructions{(Suggested length: 3 to 5 pages)}
+
+\subsection{SCIENTIFIC OR TECHNICAL OBJECTIVES}
+\label{sec:objectives:scien}
+\instructions{Describe the overall research project. Explain the main aim or
+  hypothesis and the research proposed. Anchor the project in the relevant
+  literature. 
+
+  If applicable, please indicate the Technology Readiness Level (TRL)
+  that you plan to achieve within the scope of this NPRP project. Please refer to
+  the list of Technology Readiness Levels at
+  \url{https://www.qnrf.org/en-us/Funding/Research-Programs/National-Priorities-Research-Program-NPRP}.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\subsection{ADVANCES ON STATE-OF-THE-ART}
+\label{sec:objectives:adv}
+\instructions{Describe the advance(s) your proposal would provide in knowledge
+  and understanding in your field beyond the existing knowledge and/or
+  technologies. 
+
+  Explain to what extent your proposal explores creative, original,
+  novel, or potentially transformative concepts.  
+
+  If your project specifically
+  aims to create innovative technologies or processes, then list the existing
+  solutions (Prior Art -- patents and products) closest to your research and how
+  your approach is better.  Also, list the specific aspects of your research that
+  matter to end-users in this area (the benefits an end- user desires in and
+  derives from a solution) and how you expect your proposed outcomes to perform
+  better than existing available solutions on these requirements (some examples of
+  end-user benefits are: low price, ease-of-use, high accuracy, high specificity,
+  cost-efficient, low carbon footprint, etc.).}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+
+\subsection{PRELIMINARY DATA OR STUDIES}
+\label{sec:objectives:prel}
+\instructions{Provide details on preliminary data related to this project and on
+  related research projects (ongoing or previous) by members of the research-team,
+  including QNRF projects (if any). Indicate any outputs (patents, publications,
+  products, data sets, etc.) obtained from those projects.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\section{METHODOLOGY AND PROJECT STRUCTURE}
+\label{sec:method}
+
+\subsection{METHODOLOGY}
+\label{sec:method:method}
+\instructions{Clearly describe and explain your overall methodology, methods or
+  scientific plan, including any tools to be used. Avoid duplication with the
+  section~\ref{sec:method:wps}.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+
+\subsection{RESEARCH PLAN REQUIREMENTS REGARDING THE SECTIONS ON THE PROTECTION
+OF HUMAN SUBJECTS SECTION; AND/OR ON THE VERTEBRATE ANIMAL CARE AND USE.}
+\label{sec:method:animal}
+\instructions{A Protection of Human Subjects section of the Research Plan is
+  required for all applications proposing human subjects research. To assist in
+  preparing the section on Protection of Human Subjects, possible scenarios on
+  human subject involvement in research are provided in the ``Research Ethics and
+  Regulatory Requirements'' document at
+  \url{https://www.qnrf.org/en-us/Funding/Research-Programs/National-Priorities-Research-Program-NPRP}.
+  All research projects will fall into one of these scenarios.  For all scenarios,
+  applicants must provide sufficient information to allow the reviewers to
+  determine if the designation of human subjects involvement is appropriate. The
+  proposed research must meet all the requirements of applicable Ministry of
+  Public Health policies for the protection of human subjects from research risks,
+  and data and safety monitoring (when applicable).  An overview of the
+  information that must be included in the Research Plan for activities involving
+  the care and use of vertebrate animals is provided here
+  \url{https://www.qnrf.org/en-us/Funding/Research-Programs/National-Priorities-Research-Program-NPRP}.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+
+\subsection{PROJECT MANAGEMENT}
+\label{sec:method:manag}
+\instructions{Indicate the organizational aspects of the project and the methods
+  of coordination between the various collaborators (how they will meet and
+  communicate).}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\newpage
+\subsection{TECHNICAL DESCRIPTION BY WORK PACKAGE}
+\label{sec:method:wps}
+\instructions{The WPs represent the main phase of the project. Their number is
+  limited, usually about 4 to 8 in NPRP projects. It is recommended to have one WP
+  for project management and one for communication and exploitation of the
+  results. If the project involves research with human subjects or research with
+  vertebrate animals the work must be described by jurisdiction and for all the
+  institutions engaged in research as defined by the Ministry of Public Health
+  [see \url{https://www.moph.gov.qa/about-us/Pages/research.aspx}].
+  Please note that obtaining institutional ethical committee(s)
+  review and approval is a regulatory requirement not a deliverable.  
+
+  If relevant, provide a diagram showing the organization of the WPs among
+  themselves (technical flow chart).
+
+  For each WP describe:
+  \begin{itemize}
+  \item the objectives if any,
+  \item the responsible person and the PIs involved,
+  \item the detailed work program (a few lines per tasks, etc.),
+  \item the deliverables (tangible outcomes produced by the WPs or by the tasks),
+  \item the contributions of the main participants (Who does what?, PIs, post-docs, PhD/graduate students),
+  \item a description of the methods and technical choices and the way in which solutions will be achieved,
+  \item the risks and the back-up solutions envisaged,
+  \item the performance site.
+  \end{itemize}
+}
+
+\subsubsection{\underline{WP1:} WP title (optional)}
+
+\begin{center}
+% Total width must be 1
+\begin{tabular}{|P{0.32}|P{0.136}|P{0.136}|P{0.136}|P{0.136}|P{0.136}|}
+\hline
+\textbf{Work package number} &
+  \multicolumn{5}{l|}{
+    \begin{tabular}{P{0.05}|P{0.17}|P{0.12}|P{0.17}|P{0.12}}
+      1 & \textbf{Start month} & 0 & \textbf{End month} & 0
+    \end{tabular}} \\
+\hline
+\textbf{Work package title} & \multicolumn{5}{l|}{} \\
+\hline
+\textbf{Name of participant} &  &  &  &  &  \\
+\hline
+\textbf{Effort days per participant} & 0 & 0 & 0 & 0 & 0 \\
+\hline
+\textbf{Performance site (if applicable)} &  &  &  &  &  \\
+\hline
+\multicolumn{6}{|P{1}|}{
+%
+  \textbf{Objectives of this work package:}
+
+  \medskip
+
+%
+} \\
+\hline
+\multicolumn{6}{|P{1}|}{
+%
+  \textbf{Description of work:}
+  \instructions{(where appropriate, broken down into tasks), WP leader and role of the main Participants}
+
+  \medskip
+
+  \underline{Task 1.1:}
+
+  \underline{Task 1.2:} 
+%
+} \\
+\hline
+\multicolumn{6}{|P{1}|}{
+%
+  \textbf{Deliverables:}
+  \instructions{(brief description and month of delivery)}
+
+%
+} \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\newpage
+\subsubsection{\underline{WP2:} WP title (optional)}
+%
+\begin{center}
+% Total width must be 1
+\begin{tabular}{|P{0.32}|P{0.136}|P{0.136}|P{0.136}|P{0.136}|P{0.136}|}
+\hline
+\textbf{Work package number} &
+  \multicolumn{5}{l|}{
+    \begin{tabular}{P{0.05}|P{0.17}|P{0.12}|P{0.17}|P{0.12}}
+      2 & \textbf{Start month} & 0 & \textbf{End month} & 0
+    \end{tabular}} \\
+\hline
+\textbf{Work package title} & \multicolumn{5}{l|}{} \\
+\hline
+\textbf{Name of participant} &  &  &  &  &  \\
+\hline
+\textbf{Effort days per participant} & 0 & 0 & 0 & 0 & 0 \\
+\hline
+\textbf{Performance site (if applicable)} &  &  &  &  &  \\
+\hline
+\multicolumn{6}{|P{1}|}{
+%
+  \textbf{Objectives of this work package:}
+
+  \medskip
+
+%
+} \\
+\hline
+\multicolumn{6}{|P{1}|}{
+%
+  \textbf{Description of work:}
+  \instructions{(where appropriate, broken down into tasks), WP leader and role of the main Participants}
+
+  \underline{Task 2.1:}
+
+  \underline{Task 2.2:}
+%
+} \\
+\hline
+\multicolumn{6}{|P{1}|}{
+%
+  \textbf{Deliverables:}
+  \instructions{(brief description and month of delivery)}
+%
+} \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\subsection{WPs SCHEDULE, DELIVERABLES AND MILESTONES}
+\label{sec:method:deliv}
+\instructions{Present in graphic form (Gantt diagram, for example) a schedule of
+  the WPs with their main tasks.  
+
+  Provide a table summarizing all the project
+  deliverables (task number, date, title, person \& institution responsible).
+  Evaluators should be able to judge the effort in each WP. If awarded, the list
+  of deliverables will be used to monitor the project progress. \textbf{Therefore,
+  only a reasonable number of main deliverables should be provided.} Describe the
+  main scientific and/or technical milestones.}
+
+\begin{center}
+%\begin{table}[h]
+\begin{tabular}{|C{0.07}|P{0.27}|C{0.15}|C{0.15}|C{0.15}|C{0.1}|C{0.1}|}
+\hline
+  \rowcolor{headercolor}
+  \textbf{WP\#} &
+  \multicolumn{1}{c|}{\textbf{WP title}} &
+  \textbf{Name of the responsible person} &
+  \textbf{Person days inside Qatar} &
+  \textbf{Person days outside Qatar} &
+  \textbf{Start month} &
+  \textbf{End month} \\
+\hline
+  1  &  &  &  &  &  &  \\
+\hline
+  2  &  &  &  &  &  &  \\
+\hline
+     &  &  & \textbf{Total: X}  & \textbf{Total: Y} & & \\
+\hline
+\end{tabular}
+%\caption{List of work packages}
+%\end{table}
+\end{center}
+
+
+\begin{center}
+%\begin{table}[h]
+\begin{tabular}{|C{0.15}|P{0.38}|C{0.17}|P{0.2}|C{0.10}|}
+\hline
+  \rowcolor{headercolor}
+  \textbf{Deliverable\#} &
+  \multicolumn{1}{c|}{\textbf{Deliverable title}} &
+  \textbf{Name of the responsible person} &
+  \textbf{Type of deliverable} &
+  \textbf{Delivery month} \\
+\hline
+   &  &  & \instructions{Document, report, plan designs, prototype, software, website, patent filing, media action, publications, etc.} &  \\
+\hline
+\end{tabular}
+%\caption{List of deliverables}
+%\end{table}
+\end{center}
+
+
+\newpage
+TIMETABLE
+
+\instructions{\LaTeX\ template note: Complete the timetable in file \texttt{timeline.tex}, generate the
+pdf of that one page, and replace this page by it on the final pdf.}
+
+\newpage
+\thispagestyle{fancy}
+
+\section{EXPECTED IMPACT OF THE PROJECT}
+\label{sec:impact}
+\instructions{Use quantitative indicators and targets, whenever possible.}
+
+\subsection{OUTPUTS AND OUTCOMES}
+\label{sec:impact:out}
+\instructions{Describe the specific proposed outputs (examples are provided in
+  the Definitions and Terminologies document --
+  \url{https://www.qnrf.org/en-us/Funding/Research-Programs/National-Priorities-Research-Program-NPRP})
+  and expected outcomes (peer-reviewed publications, patents, creative works, and
+  others) of this research and indicate which ones you plan to create within the
+  scope of the project.  Avoid generic descriptions and be as specific as
+  possible.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+
+\subsection{ALIGNMENT TO NPRP-S PRIORITY THEMES}
+\label{sec:impact:align}
+\instructions{Provide a strong rationale justifying the alignment of your
+  proposal with NPRP-Standard priority theme(s).}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\subsection{SOCIAL, HEALTH, ECONOMIC, AND ENVIRONMENTAL IMPACT}
+\label{sec:impact:social}
+\instructions{Awarded research projects are expected to focus on Qatar's
+  development needs and to accelerate research in national fields of excellence.
+  Describe how your project will contribute to:
+  \begin{itemize}
+  \item improving innovation capacity and the integration of new knowledge in Qatar and/or the region,
+  \item the impact on any other environmental, health, economic and socially important aspects,
+  \item improving research and education capacities in Qatar.
+  \end{itemize}
+  Describe specific future plans and potential research developments after the
+  project's completion, if applicable. Avoid generic descriptions that could apply
+  to any project.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+
+\subsection{COMMUNICATION AND EXPLOITATION OF RESULTS}
+\label{sec:impact:comm}
+\instructions{Provide a specific plan for the communication and exploitation of
+  the project's results as well as the promotion of the project and its findings.
+  Examples could include workshops, public seminars, professional training, policy
+  papers, media outreach. Avoid generic descriptions that could apply to any
+  project.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\section{RISK ASSESSMENT AND MITIGATION}
+\label{sec:risk}
+\instructions{Assess the risks associated with conducting or completing the
+  research project as proposed, and outline plans for mitigating them. Risks
+  include threats to health and safety to researchers and subjects of research,
+  delays, for example, in recruitment (researchers, students, patients, etc.) or
+  procurement, or in obtaining regulatory (e.g., ethical) permissions. Risks
+  could also be scientific, such as degrees of certainty, long execution times
+  of codes or malfunction of equipment and facilities. You should describe the
+  nature and degree of risk, its likelihood of occurrence, and outline plans of
+  mitigating it.
+}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\section{RESEARCH TEAM DESCRIPTION}
+\label{sec:team}
+
+\subsection{DESCRIPTION, SUITABILITY AND COMPLEMENTARITY OF THE RESEARCH TEAM
+MEMBERS}
+\label{sec:team:memb}
+\instructions{Briefly describe each PI, the research team and their
+  institutional affiliation. Provide an assessment of their qualification to
+  participate in the project and their specific roles in the project.
+  Qualifications can include past achievements, research outcome indicators
+  (publications, patents), and the specific expertise the research team member
+  adds to the project, etc.  
+
+  Show how team members complement each other's
+  expertise and describe the added value of the collaborations, with a special
+  emphasis on the contribution by the LPI and his/her team.  Interdisciplinarity
+  and the inclusion of specific Qatar-based and external research teams must be
+  justified in accordance with the project objectives. Outline how international
+  collaborations (if applicable to your project) will enhance the research
+  capacity and scientific excellence in Qatar.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\subsubsection{LPI}
+\instructions{Provide justification of the LPI's capability to coordinate the
+  project and the research team(s).}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\subsubsection{PIs}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\subsubsection{Other research staff (RAs, PDFs, students, etc, ...)}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\subsection{RELEVANT PUBLICATIONS}
+\label{sec:team:pub}
+\instructions{List up to five publications or patents of the research team most
+  relevant to the proposed project.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\noindent
+\emph{The Lord of the Rings.} J. R. R. Tolkien.
+Journal of the Middle-earth, Volume XXX, Issue X, 1954, Pages 1-1000.
+
+\medskip
+
+\noindent
+\emph{The Hitchhiker's Guide to the Galaxy.}
+Ford Prefect and Arthur Dent. Technical Report, 4200.
+
+\end{adjustwidth}
+
+\subsection{CONSULTANTS/SERVICE PROVIDERS INVOLVED IN THE PROJECT}
+\label{sec:team:cons}
+\instructions{Does the participant plan to outsource certain tasks (please note
+  that core tasks with research and intellectual contribution of the project must
+  not be outsourced and carried out by consultants -- see definition of a
+  consultant at
+  \url{https://www.qnrf.org/en-us/Funding/Research-Programs/National-Priorities-Research-Program-NPRP})?
+
+  If yes, please describe and justify the tasks to be outsourced.  List the
+  consultants and service providers to be involved in the project and describe
+  their contribution.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+
+\subsection[INVOLVEMENT OF RESEARCH END-USERS IN THE PROJECT]{Involvement of
+Research End-Users in the Project}
+\label{sec:team:enduser}
+\instructions{If the project team involves a research end-user(s) (public
+  organizations, companies, non-profit organizations) that is contributing to the
+  project as a collaborative institution, then describe its contribution. Check
+  the QNRF's co-funding policy.  Specify in which manner the research end-user(s)
+  may benefit from the project outcomes and how, specifically, it will support the
+  project. Specify for each activity whether the support is a cash and/or in- kind
+  contribution. If the co-funder is not a collaborative institution, provide a
+  short presentation of the co- funder and specify how the co-funder will fund the
+  project.
+  \begin{itemize}
+  \item Cash contribution: describe and justify the cash contribution of the
+  research end-user(s) that plans to participate in the project. State the value
+  of the cash contribution. Specify who in the project team will benefit from the
+  cash contribution (overall team or some collaborative institutions only).
+  \item In-kind contribution: describe and justify the in-kind contribution of the
+  research end-user(s) that plans to participate in the project. Estimate the
+  value of the in-kind contribution.
+  \end{itemize}
+}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+%% cash contribution table: TODO
+
+%% in-kind contribution table: TODO
+
+\section{RENEWAL JUSTIFICATION (if applicable)}
+\instructions{If this proposal is a renewal application, LPIs need to justify
+  the request by describing the excellent outcomes/ accomplishments that have
+  resulted from the previous NPRP-award (including publications, patent(s),
+  human resources development at the postdoctoral, graduate and undergraduate
+  levels, etc.) and how these outcomes/accomplishments support the current
+  proposal.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
+\section{\refname}
+\instructions{Include the list of bibliographic references used in the research plan.}
+
+\bibliographystyle{plain}
+\bibliography{researchPlan}
+
+\end{document}

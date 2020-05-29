@@ -1,0 +1,88 @@
+\usepackage[T1]{fontenc}
+%\usepackage[scaled]{latex/ua1/uarial}
+\usepackage{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{xcolor}                 \definecolor{dark}{gray}{.5}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage{titlesec}
+\usepackage[dotinlabels]{titletoc}
+\usepackage{changepage}
+\usepackage[left=0.6in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{enumerate}
+
+\titleformat*{\section}{\normalsize\bfseries}
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titlespacing*{\subsection}{0.1in}{10pt}{5pt}
+\titlespacing*{\subsubsection}{0.2in}{10pt}{5pt}
+
+% Dot after section number and space between section number and title
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname.\ }
+\makeatother
+
+% Radiobuttons on front page
+\usepackage{tikz}
+\makeatletter
+\newcommand*{\radiobutton}{%
+  \@ifstar{\@radiobutton0}{\@radiobutton1}%
+}
+\newcommand*{\@radiobutton}[1]{%
+  \begin{tikzpicture}
+    \pgfmathsetlengthmacro\radius{height("X")/2}
+    \draw[radius=\radius] circle;
+    \ifcase#1 \fill[radius=.6*\radius] circle;\fi
+  \end{tikzpicture}%
+}
+\makeatother
+
+\newcommand{\PartName}{}
+\newcommand{\Part}[1]
+ {\renewcommand{\PartName}{#1}
+  \clearpage%
+  \setcounter{section}{-1}%
+  %\setcounter{page}{1}%
+  \noindent%
+  \textbf{#1}%
+  \vspace{3pt}%
+  \noindent}
+
+\newcommand{\instructions}[1]
+ {\ifthenelse{\isundefined{\draft}}
+   {}
+   {{\color{dark} \small #1} \smallskip\par}}
+
+\newcommand{\pagestyletoc}
+ {\cfoot{}\rfoot{}}
+\newcommand{\pagestylebody}
+ {\cfoot{}\rfoot{{\small\textbf{Page \thepage}}}}
+% {\rfoot{\PartName{} -- \thepage}}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%\textwidth=18.5cm
+%\textheight=23cm
+%\hoffset=-2.5cm
+%\voffset=-1.5cm
+%\parskip=0.5ex
+%\textwidth=8.17in
+\textheight=9.57in
+\voffset=0.5in
+\footskip=0.65in
+%\parskip=0.5ex
+%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+%\headheight=16pt
+%\headsep=12pt
+\headheight=0.04in
+\headsep=0.24in
+\headwidth=\textwidth
+\renewcommand{\footrulewidth}{\headrulewidth}
+\lhead{}
+\rhead{{\small NPRP-S No.: \proposalNo}}
+\lfoot{{\small\textbf{QNRF -- NPRP-S 13\textsuperscript{th} cycle Research Plan Form {\color{red}(Revised December 2019)}}}}
+
