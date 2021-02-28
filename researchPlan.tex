@@ -33,10 +33,14 @@
 % For tables
 \renewcommand{\arraystretch}{1.5}
 \newcolumntype{P}[1]{m{\dimexpr #1\textwidth-2\tabcolsep}}
-\newcolumntype{C}[1]{>{\centering\arraybackslash}P{#1}}
+% Vertically centered wrapping columns
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+% Vertically and horizontally centered wraping columns
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 \definecolor{headercolor}{gray}{.8}
 \colorlet{wpcolor}{blue!20}
 \colorlet{taskcolor}{red!20}
+\newlength{\realwidth}
 
 \begin{document}
 \thispagestyle{empty}
@@ -150,9 +154,19 @@ proposals must point out in the body of this research plan (e.g. in bold type,
 line in the margin, underlining, italic, etc.) all revisions and modifications
 made in response to the PRs' comments.}
 
+\section{RENEWAL JUSTIFICATION (if applicable)}
+\instructions{If this proposal is a renewal application, LPIs need to justify
+  the request by describing the excellent outcomes/ accomplishments that have
+  resulted from the previous NPRP-award (including publications, patent(s),
+  human resources development at the postdoctoral, graduate and undergraduate
+  levels, etc.) and how these outcomes/accomplishments support the current
+  proposal.}
+
+\begin{adjustwidth}{0.2in}{0in}
+\end{adjustwidth}
+
 \section{OBJECTIVES AND SIGNIFICANCE}
 \label{sec:objectives}
-\instructions{(Suggested length: 3 to 5 pages)}
 
 \subsection{SCIENTIFIC OR TECHNICAL OBJECTIVES}
 \label{sec:objectives:scien}
@@ -275,109 +289,169 @@ OF HUMAN SUBJECTS SECTION; AND/OR ON THE VERTEBRATE ANIMAL CARE AND USE.}
   \end{itemize}
 }
 
-\subsubsection{\underline{WP1:} WP title (optional)}
+\subsubsection{\underline{Work Packages (WP) 1:}}
 
 \begin{center}
-% Total width must be 1
-\begin{tabular}{|P{0.32}|P{0.136}|P{0.136}|P{0.136}|P{0.136}|P{0.136}|}
-\hline
-\textbf{Work package number} &
-  \multicolumn{5}{l|}{
-    \begin{tabular}{P{0.05}|P{0.17}|P{0.12}|P{0.17}|P{0.12}}
-      1 & \textbf{Start month} & 0 & \textbf{End month} & 0
-    \end{tabular}} \\
-\hline
-\textbf{Work package title} & \multicolumn{5}{l|}{} \\
-\hline
-\textbf{Name of participant} &  &  &  &  &  \\
-\hline
-\textbf{Effort days per participant} & 0 & 0 & 0 & 0 & 0 \\
-\hline
-\textbf{Performance site (if applicable)} &  &  &  &  &  \\
-\hline
-\multicolumn{6}{|P{1}|}{
-%
-  \textbf{Objectives of this work package:}
 
-  \medskip
-
-%
-} \\
+\setlength{\realwidth}{\dimexpr \textwidth - 8\tabcolsep - 5\arrayrulewidth}
+\begin{tabular}{|p{0.1\realwidth}|p{0.6\realwidth}|p{0.15\realwidth}|p{0.15\realwidth}|}
 \hline
-\multicolumn{6}{|P{1}|}{
-%
-  \textbf{Description of work:}
-  \instructions{(where appropriate, broken down into tasks), WP leader and role of the main Participants}
-
-  \medskip
-
-  \underline{Task 1.1:}
-
-  \underline{Task 1.2:} 
-%
-} \\
+  \textbf{\ul{WP\#}} & 
+  \textbf{\ul{Work Package Title}} & 
+  \textbf{\ul{Start Month}} &
+  \textbf{\ul{End Month}} \\
 \hline
-\multicolumn{6}{|P{1}|}{
-%
-  \textbf{Deliverables:}
-  \instructions{(brief description and month of delivery)}
-
-%
-} \\
+1 & Enter the work package title here &  &  \\
 \hline
 \end{tabular}
+
+\vspace{1em}
+
+\setlength{\realwidth}{\dimexpr \textwidth - 8\tabcolsep - 5\arrayrulewidth}
+\begin{tabular}{|p{0.4\realwidth}|p{0.22\realwidth}|p{0.2\realwidth}|C{0.18\realwidth}|}
+\hline
+  \textbf{\ul{Participant Name}} & 
+  \textbf{\ul{Efforts Inside Qatar}} & 
+  \textbf{\ul{Efforts Outside Qatar}} &
+  \textbf{\ul{Total Efforts in Days}} \\
+\hline
+Participant Name 1 &  &  &  \\
+\hline
+Participant Name 2 &  &  &  \\
+\hline
+Participant Name 3 &  &  &  \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+
+\setlength{\realwidth}{\dimexpr \textwidth - 2\tabcolsep - 2\arrayrulewidth}
+\begin{tabular}{|p{1\realwidth}|}
+\hline
+\textbf{Objectives of this work package} \\
+\hline
+Enter the objectives of this WP here \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+
+\begin{tabular}{|p{1\realwidth}|}
+\hline
+\textbf{Description of work} \\
+\hline
+Where appropriate, broken down into tasks, WP leader and role of the main Participants.
+\begin{itemize}
+  \item Task 1.1 :
+  \item Task 1.2 :
+\end{itemize}
+ \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+
+\begin{tabular}{|p{1\realwidth}|}
+\hline
+\textbf{Deliverables} \\
+\hline
+Enter the description and month of delivery here \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+
+\begin{tabular}{|p{1\realwidth}|}
+\hline
+\textbf{Perfomance Site(s)} \\
+\hline
+Enter the performance sites here (if applicable) \\
+\hline
+\end{tabular}
+
 \end{center}
 
 
-\newpage
-\subsubsection{\underline{WP2:} WP title (optional)}
-%
+\subsubsection{\underline{Work Packages (WP) 2:}}
+
 \begin{center}
-% Total width must be 1
-\begin{tabular}{|P{0.32}|P{0.136}|P{0.136}|P{0.136}|P{0.136}|P{0.136}|}
-\hline
-\textbf{Work package number} &
-  \multicolumn{5}{l|}{
-    \begin{tabular}{P{0.05}|P{0.17}|P{0.12}|P{0.17}|P{0.12}}
-      2 & \textbf{Start month} & 0 & \textbf{End month} & 0
-    \end{tabular}} \\
-\hline
-\textbf{Work package title} & \multicolumn{5}{l|}{} \\
-\hline
-\textbf{Name of participant} &  &  &  &  &  \\
-\hline
-\textbf{Effort days per participant} & 0 & 0 & 0 & 0 & 0 \\
-\hline
-\textbf{Performance site (if applicable)} &  &  &  &  &  \\
-\hline
-\multicolumn{6}{|P{1}|}{
-%
-  \textbf{Objectives of this work package:}
 
-  \medskip
-
-%
-} \\
+\setlength{\realwidth}{\dimexpr \textwidth - 8\tabcolsep - 5\arrayrulewidth}
+\begin{tabular}{|p{0.1\realwidth}|p{0.6\realwidth}|p{0.15\realwidth}|p{0.15\realwidth}|}
 \hline
-\multicolumn{6}{|P{1}|}{
-%
-  \textbf{Description of work:}
-  \instructions{(where appropriate, broken down into tasks), WP leader and role of the main Participants}
-
-  \underline{Task 2.1:}
-
-  \underline{Task 2.2:}
-%
-} \\
+  \textbf{\ul{WP\#}} & 
+  \textbf{\ul{Work Package Title}} & 
+  \textbf{\ul{Start Month}} &
+  \textbf{\ul{End Month}} \\
 \hline
-\multicolumn{6}{|P{1}|}{
-%
-  \textbf{Deliverables:}
-  \instructions{(brief description and month of delivery)}
-%
-} \\
+2 & Enter the work package title here &  &  \\
 \hline
 \end{tabular}
+
+\vspace{1em}
+
+\setlength{\realwidth}{\dimexpr \textwidth - 8\tabcolsep - 5\arrayrulewidth}
+\begin{tabular}{|p{0.4\realwidth}|p{0.22\realwidth}|p{0.2\realwidth}|C{0.18\realwidth}|}
+\hline
+  \textbf{\ul{Participant Name}} & 
+  \textbf{\ul{Efforts Inside Qatar}} & 
+  \textbf{\ul{Efforts Outside Qatar}} &
+  \textbf{\ul{Total Efforts in Days}} \\
+\hline
+Participant Name 1 &  &  &  \\
+\hline
+Participant Name 2 &  &  &  \\
+\hline
+Participant Name 3 &  &  &  \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+
+\setlength{\realwidth}{\dimexpr \textwidth - 2\tabcolsep - 2\arrayrulewidth}
+\begin{tabular}{|p{1\realwidth}|}
+\hline
+\textbf{Objectives of this work package} \\
+\hline
+Enter the objectives of this WP here \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+
+\begin{tabular}{|p{1\realwidth}|}
+\hline
+\textbf{Description of work} \\
+\hline
+Where appropriate, broken down into tasks, WP leader and role of the main Participants.
+\begin{itemize}
+  \item Task 1.1 :
+  \item Task 1.2 :
+\end{itemize}
+ \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+
+\begin{tabular}{|p{1\realwidth}|}
+\hline
+\textbf{Deliverables} \\
+\hline
+Enter the description and month of delivery here \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+
+\begin{tabular}{|p{1\realwidth}|}
+\hline
+\textbf{Perfomance Site(s)} \\
+\hline
+Enter the performance sites here (if applicable) \\
+\hline
+\end{tabular}
+
 \end{center}
 
 
@@ -393,24 +467,28 @@ OF HUMAN SUBJECTS SECTION; AND/OR ON THE VERTEBRATE ANIMAL CARE AND USE.}
   only a reasonable number of main deliverables should be provided.} Describe the
   main scientific and/or technical milestones.}
 
+
+%% TODO redo all tables below
+
 \begin{center}
-%\begin{table}[h]
-\begin{tabular}{|C{0.07}|P{0.27}|C{0.15}|C{0.15}|C{0.15}|C{0.1}|C{0.1}|}
+
+\setlength{\realwidth}{\dimexpr \textwidth - 14\tabcolsep - 8\arrayrulewidth}
+\begin{tabular}{|M{0.109\realwidth}|M{0.204\realwidth}|M{0.169\realwidth}|M{0.144\realwidth}|M{0.145\realwidth}|M{0.121\realwidth}|M{0.108\realwidth}|}
 \hline
   \rowcolor{headercolor}
-  \textbf{WP\#} &
-  \multicolumn{1}{c|}{\textbf{WP title}} &
-  \textbf{Name of the responsible person} &
-  \textbf{Person days inside Qatar} &
-  \textbf{Person days outside Qatar} &
-  \textbf{Start month} &
-  \textbf{End month} \\
+  \textbf{WP number} &
+  \textbf{WP title} &
+  \textbf{Responsible person} &
+  \textbf{Person-days inside Qatar} &
+  \textbf{Person-days outside Qatar} &
+  \textbf{Start date} &
+  \textbf{End date} \\
 \hline
   1  &  &  &  &  &  &  \\
 \hline
   2  &  &  &  &  &  &  \\
 \hline
-     &  &  & \textbf{Total: X}  & \textbf{Total: Y} & & \\
+     &  &  & \textbf{Total days}  & \textbf{Total days} & & \\
 \hline
 \end{tabular}
 %\caption{List of work packages}
@@ -420,16 +498,22 @@ OF HUMAN SUBJECTS SECTION; AND/OR ON THE VERTEBRATE ANIMAL CARE AND USE.}
 
 \begin{center}
 %\begin{table}[h]
-\begin{tabular}{|C{0.15}|P{0.38}|C{0.17}|P{0.2}|C{0.10}|}
+\setlength{\realwidth}{\dimexpr \textwidth - 12\tabcolsep - 7\arrayrulewidth}
+\begin{tabular}{|M{0.1\realwidth}|M{0.19\realwidth}|M{0.19\realwidth}|M{0.17\realwidth}|M{0.25\realwidth}|M{0.10\realwidth}|}
 \hline
   \rowcolor{headercolor}
-  \textbf{Deliverable\#} &
-  \multicolumn{1}{c|}{\textbf{Deliverable title}} &
-  \textbf{Name of the responsible person} &
+  \textbf{WP \#} &
+  \textbf{Deliverable number} &
+  \textbf{Deliverable title} &
+  \textbf{Responsible person} &
   \textbf{Type of deliverable} &
-  \textbf{Delivery month} \\
+  \textbf{Delivery date} \\
 \hline
-   &  &  & \instructions{Document, report, plan designs, prototype, software, website, patent filing, media action, publications, etc.} &  \\
+   &  &  &  & \instructions{Document, report, plan designs, prototype, software, website, patent filing, media action, publications, etc.} &  \\
+\hline
+   &  &  &  &  &  \\
+\hline
+   &  &  &  &  &  \\
 \hline
 \end{tabular}
 %\caption{List of deliverables}
@@ -576,7 +660,7 @@ Ford Prefect and Arthur Dent. Technical Report, 4200.
 
 \end{adjustwidth}
 
-\subsection{CONSULTANTS/SERVICE PROVIDERS INVOLVED IN THE PROJECT}
+\subsection{CONSULTANTS AND SERVICE PROVIDERS}
 \label{sec:team:cons}
 \instructions{Does the participant plan to outsource certain tasks (please note
   that core tasks with research and intellectual contribution of the project must
@@ -592,27 +676,24 @@ Ford Prefect and Arthur Dent. Technical Report, 4200.
 \end{adjustwidth}
 
 
-\subsection[INVOLVEMENT OF RESEARCH END-USERS IN THE PROJECT]{Involvement of
-Research End-Users in the Project}
+\subsection{CO-FUNDING AND COST SHARING}
 \label{sec:team:enduser}
-\instructions{If the project team involves a research end-user(s) (public
-  organizations, companies, non-profit organizations) that is contributing to the
-  project as a collaborative institution, then describe its contribution. Check
-  the QNRF's co-funding policy.  Specify in which manner the research end-user(s)
-  may benefit from the project outcomes and how, specifically, it will support the
-  project. Specify for each activity whether the support is a cash and/or in- kind
-  contribution. If the co-funder is not a collaborative institution, provide a
-  short presentation of the co- funder and specify how the co-funder will fund the
-  project.
-  \begin{itemize}
-  \item Cash contribution: describe and justify the cash contribution of the
-  research end-user(s) that plans to participate in the project. State the value
-  of the cash contribution. Specify who in the project team will benefit from the
-  cash contribution (overall team or some collaborative institutions only).
-  \item In-kind contribution: describe and justify the in-kind contribution of the
-  research end-user(s) that plans to participate in the project. Estimate the
-  value of the in-kind contribution.
-  \end{itemize}
+\instructions{
+  If appliable, describe the role and contribution of any research
+  end-user(s) involved in the project as a collaborative institution.
+
+  Specify in which manner the research end-user(s) may benefit from
+  the project outcomes and how, specifically, it will support the
+  project. Specify for each activity whether the support is co-funding
+  or cost-sharing. If the co-funder is not a collaborative
+  institution, provide a description of their profile and the manner
+  in which they will co-fund the project. 
+
+  \textbf{Co-funding contribution:} describe and justify the
+  co-funding contribution of the research end-user(s), and state the
+  value of their contribution. Specify the recipient of the
+  contribution (overall team or specific collaborative
+  institution(s)).
 }
 
 \begin{adjustwidth}{0.2in}{0in}
@@ -622,16 +703,6 @@ Research End-Users in the Project}
 
 %% in-kind contribution table: TODO
 
-\section{RENEWAL JUSTIFICATION (if applicable)}
-\instructions{If this proposal is a renewal application, LPIs need to justify
-  the request by describing the excellent outcomes/ accomplishments that have
-  resulted from the previous NPRP-award (including publications, patent(s),
-  human resources development at the postdoctoral, graduate and undergraduate
-  levels, etc.) and how these outcomes/accomplishments support the current
-  proposal.}
-
-\begin{adjustwidth}{0.2in}{0in}
-\end{adjustwidth}
 
 \section{\refname}
 \instructions{Include the list of bibliographic references used in the research plan.}
