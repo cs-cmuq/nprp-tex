@@ -15,32 +15,8 @@
 
 \input{NPRP-macros}
 
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{stmaryrd}
-\usepackage{proof}
-\usepackage[hyphens,spaces,obeyspaces]{url}
-%\usepackage{hyperref}           %must be last
-
-% For highlighting
-\usepackage{soul}
-\sethlcolor{yellow}
-
 \renewcommand{\contentsname}{Table of Contents}
 \newenvironment{OLD}{\color{red}}{\color{black}}
-
-% For tables
-\renewcommand{\arraystretch}{1.5}
-\newcolumntype{P}[1]{m{\dimexpr #1\textwidth-2\tabcolsep}}
-% Vertically centered wrapping columns
-\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
-% Vertically and horizontally centered wraping columns
-\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
-\definecolor{headercolor}{gray}{.8}
-\colorlet{wpcolor}{blue!20}
-\colorlet{taskcolor}{red!20}
-\newlength{\realwidth}
 
 \begin{document}
 \thispagestyle{empty}
@@ -109,8 +85,7 @@
 
 
 \newpage
-%\pagestyletoc
-\pagestylebody
+
 \doublespacing
 \tableofcontents
 \singlespacing
@@ -521,14 +496,116 @@ Enter the performance sites here (if applicable) \\
 \end{center}
 
 
-\newpage
-TIMETABLE
+\uselandscape
 
-\instructions{\LaTeX\ template note: Complete the timetable in file \texttt{timeline.tex}, generate the
-pdf of that one page, and replace this page by it on the final pdf.}
+\noindent
+\textbf{Table 3: Estimated timeline of the project}
+\vspace{1cm}
 
-\newpage
-\thispagestyle{fancy}
+\newcommand{\w}{\cellcolor{wpcolor}}
+\newcommand{\s}{\cellcolor{taskcolor}}
+\newcommand{\rb}[1]{\textbf{{\color{red}#1}}}
+
+{\scriptsize
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+  \multirow{2}{*}{\textbf{WPs \& Tasks}} &
+  \multicolumn{12}{c|}{\cellcolor{headercolor}\textbf{Year 1}} &
+  \multicolumn{12}{c|}{\cellcolor{headercolor}\textbf{Year 2}} &
+  \multicolumn{12}{c|}{\cellcolor{headercolor}\textbf{Year 3}} \tabularnewline
+\cline{2-37}
+ & \rb{1} & \rb{2} & \rb{3} & \rb{4} & \rb{5} & \rb{6} & \rb{7} & \rb{8} & \rb{9} & \rb{10} & \rb{11} & \rb{12} &
+   \rb{1} & \rb{2} & \rb{3} & \rb{4} & \rb{5} & \rb{6} & \rb{7} & \rb{8} & \rb{9} & \rb{10} & \rb{11} & \rb{12} &
+   \rb{1} & \rb{2} & \rb{3} & \rb{4} & \rb{5} & \rb{6} & \rb{7} & \rb{8} & \rb{9} & \rb{10} & \rb{11} & \rb{12} \tabularnewline
+\hline
+ \textbf{WP1}      & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w
+         &  &  &  &  &  &  &  &  &  &  &  &
+         &  &  &  &  &  &  &  &  &  &  &  &  \tabularnewline
+\hline
+ \textbf{Task 1.1} & \s & \s & \s & \s & \s & \s &  &  &  &  &  &
+         &  &  &  &  &  &  &  &  &  &  &  &
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{Task 1.2} &  &  &  &  &  &  & \s & \s & \s & \s & \s & \s
+         &  &  &  &  &  &  &  &  &  &  &  &
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{WP2}      &  &  &  &  &  &  & \w & \w & \w & \w & \w & \w
+         & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{Task 2.1} &  &  &  &  &  &  & \s & \s & \s & \s & \s & \s
+         &  &  &  &  &  &  &  &  &  &  &  &
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{Task 2.2} &  &  &  &  &  &  & \s & \s & \s & \s & \s & \s
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{WP3}      &  &  &  &  &  &  &  &  &  &  &  &
+         & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{Task 3.1} &  &  &  &  &  &  &  &  &  &  &  &
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{Task 3.2} &  &  &  &  &  &  &  &  &  &  &  &
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{Task 3.3} &  &  &  &  &  &  &  &  &  &  &  &
+         &  &  &  & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{WP4}      &  &  &  &  &  &  &  &  &  &  &  &
+         & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w
+         & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w\tabularnewline
+\hline
+ \textbf{Task 4.1} &  &  &  &  &  &  &  &  &  &  &  &
+         & \s & \s & \s & \s & \s & \s &  &  &  &  &  &
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{Task 4.2} &  &  &  &  &  &  &  &  &  &  &  &
+         &  &  &  & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         &  &  &  &  &  &  &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{Task 4.3} &  &  &  &  &  &  &  &  &  &  &  &
+         &  &  &  &  &  &  & \s & \s & \s & \s & \s & \s
+         & \s & \s & \s & \s & \s & \s &  &  &  &  &  & \tabularnewline
+\hline
+ \textbf{Task 4.4} &  &  &  &  &  &  &  &  &  &  &  &
+         &  &  &  &  &  &  & \s & \s & \s & \s & \s & \s
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s \tabularnewline
+\hline
+ \textbf{WP5}      & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w
+         & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w
+         & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \tabularnewline
+\hline
+ \textbf{Task 5.1} & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s \tabularnewline
+\hline
+ \textbf{WP6}      & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w
+         & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w
+         & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \tabularnewline
+\hline
+ \textbf{Task 6.1} & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s \tabularnewline
+\hline
+ \textbf{Task 6.2} &  &  &  &  &  &  & \s & \s & \s & \s & \s & \s
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s \tabularnewline
+\hline
+ \textbf{Task 6.3} &  &  &  &  &  &  &  &  &  &  &  &
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s
+         & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s & \s \tabularnewline
+\hline
+\end{tabular}
+}
+
+\useportrait
 
 \section{EXPECTED IMPACT OF THE PROJECT}
 \label{sec:impact}

@@ -2,18 +2,55 @@
 %\usepackage[scaled]{uarial}
 \usepackage{helvet}
 \renewcommand*\familydefault{\sfdefault}
-\usepackage{xcolor}                 \definecolor{dark}{gray}{.5}
+
+\usepackage{xcolor}                 
+\definecolor{dark}{gray}{.5}
 \usepackage{fancyhdr}
 \usepackage{ifthen}
 \usepackage{titlesec}
 \usepackage[dotinlabels]{titletoc}
 \usepackage{changepage}
-\usepackage[left=0.5in,right=0.5in,top=0.8in,bottom=0.8in]{geometry}
 \usepackage{setspace}
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{colortbl}
 \usepackage{enumerate}
+
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{proof}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+%\usepackage{hyperref}           % if you want links in the pdf
+
+%% For highlighting
+\usepackage{soul}
+\sethlcolor{yellow}
+
+%% Allows changing from portrait to landspace pages and back
+\usepackage[usegeometry]{typearea}
+\usepackage{geometry}
+\geometry{
+  left=0.5in, right=0.5in, top=1in, bottom=1.2in
+}
+\newcommand*{\useportrait}{%
+  \clearpage
+  \KOMAoptions{paper=portrait,DIV=current} % switch to portrait
+  \newgeometry{ % geometry settings for portrait
+    left=0.5in, right=0.5in, top=1in, bottom=1.2in
+  }%
+  \fancyhfoffset{0pt} % recalculate head and foot width for fancyhdr
+}
+\newcommand*{\uselandscape}{%
+  \clearpage
+  \KOMAoptions{paper=landscape,DIV=current} % switch to landscape
+  \newgeometry{ % geometry settings for landscape
+    left=0.5in, right=0.5in, top=1in, bottom=1.2in
+  }%
+  \fancyhfoffset{0pt} % recalculate head and foot width for fancyhdr
+}
 
 \titleformat*{\section}{\normalsize\bfseries}
 \titlespacing*{\section}{0pt}{10pt}{5pt}
@@ -56,33 +93,25 @@
    {}
    {{\color{dark} \small #1} \smallskip\par}}
 
-\newcommand{\pagestyletoc}
- {\cfoot{}\rfoot{}}
-\newcommand{\pagestylebody}
- {\cfoot{}\rfoot{{\small\textbf{Page \thepage}}}}
-% {\rfoot{\PartName{} -- \thepage}}
 
-%%%%%%%%%%%%%%%%%%%%%%
-%\textwidth=18.5cm
-%\textheight=23cm
-%\hoffset=-2.5cm
-%\voffset=-1.5cm
-%\parskip=0.5ex
-%\textwidth=8.17in
-\textheight=9.57in
-\voffset=0.5in
-\footskip=0.65in
-%\parskip=0.5ex
-%%%%%%%%%%%%%%%%%%%%%%
-
+%% Headers and footers
 \pagestyle{fancy}
-%\headheight=16pt
-%\headsep=12pt
-\headheight=0.04in
-\headsep=0.24in
-\headwidth=\textwidth
 \renewcommand{\footrulewidth}{\headrulewidth}
 \lhead{}
 \rhead{{\small NPRP-S No.: \proposalNo}}
 \lfoot{{\small\textbf{QNRF -- NPRP-S 14\textsuperscript{th} cycle Research Plan Form {\color{red}(Revised February 2021)}}}}
+\cfoot{}
+\rfoot{{\small\textbf{Page \thepage}}}
 
+
+%% For tables
+\renewcommand{\arraystretch}{1.5}
+\newcolumntype{P}[1]{m{\dimexpr #1\textwidth-2\tabcolsep}}
+% Vertically centered wrapping columns
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+% Vertically and horizontally centered wraping columns
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\definecolor{headercolor}{gray}{.8}
+\colorlet{wpcolor}{blue!20}
+\colorlet{taskcolor}{red!20}
+\newlength{\realwidth}
