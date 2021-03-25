@@ -1,1 +1,12 @@
 sample-proposals/
+*.log
+*.aux
+*.make
+*.temp
+*.out
+*.toc
+*.bbl
+*.blg
+*.d
+*.fls
+*.pdf
