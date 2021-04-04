@@ -29,6 +29,12 @@
 \usepackage{soul}
 \sethlcolor{yellow}
 
+% Table of contents
+\titlecontents{section}[0em]{\smallskip\bfseries} % margin and space after item
+{\thecontentslabel.\enspace} %numbered sections
+{} %numberless section
+{\titlerule*[0.4pc]{.}\contentspage} % dots between title and page number
+
 %% Allows changing from portrait to landspace pages and back
 \usepackage[usegeometry]{typearea}
 \usepackage{geometry}
