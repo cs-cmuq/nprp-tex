@@ -1,0 +1,138 @@
+\usepackage[T1]{fontenc}
+%\usepackage[scaled]{uarial}
+\usepackage{helvet}
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage[dvipsnames]{xcolor}                 
+\definecolor{dark}{gray}{.5}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage{titlesec}
+\usepackage[dotinlabels]{titletoc}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{proof}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage[hidelinks]{hyperref}
+
+%% For highlighting
+\usepackage{soul}
+\sethlcolor{yellow}
+
+% Table of contents
+\usepackage[titles]{tocloft}
+%\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+% Style for sections
+\renewcommand\contentsname{Table of Contents}
+\titlecontents{section}[0em]{\bigskip\bfseries} % margin and space after item
+{\thecontentslabel.\enspace} %numbered sections
+{} %numberless section
+{\titlerule*[0.4pc]{.}\contentspage} % dots between title and page number
+% Style for subsections
+\titlecontents{subsection}[0em]{\medskip\hspace{0.167in}} % margin and space after item
+{\thecontentslabel.\enspace} %numbered sections
+{} %numberless section
+{\titlerule*[0.4pc]{.}\contentspage} % dots between title and page number
+
+
+%% Allows changing from portrait to landspace pages and back
+\usepackage[usegeometry]{typearea}
+\usepackage{geometry}
+\geometry{
+  left=0.5in, right=0.5in, top=1in, bottom=1.2in
+}
+\newcommand*{\useportrait}{%
+  \clearpage
+  \KOMAoptions{paper=portrait,DIV=current} % switch to portrait
+  \newgeometry{ % geometry settings for portrait
+    left=0.5in, right=0.5in, top=1in, bottom=1.2in
+  }%
+  \fancyhfoffset{0pt} % recalculate head and foot width for fancyhdr
+}
+\newcommand*{\uselandscape}{%
+  \clearpage
+  \KOMAoptions{paper=landscape,DIV=current} % switch to landscape
+  \newgeometry{ % geometry settings for landscape
+    left=0.5in, right=0.5in, top=1in, bottom=1.2in
+  }%
+  \fancyhfoffset{0pt} % recalculate head and foot width for fancyhdr
+}
+
+\titleformat*{\section}{\normalsize\bfseries}
+%\titlespacing*{\section}{0pt}{0pt}{0.5\baselineskip}
+%\titlespacing*{\subsection}{0pt}{0pt}{0pt}
+%\titlespacing*{\subsubsection}{0pt}{10pt}{5pt}
+\titlespacing*{\section}{0pt}{1\baselineskip}{0.3\baselineskip}
+\titlespacing*{\subsection}{0pt}{1\baselineskip}{0.3\baselineskip}
+\titlespacing*{\subsubsection}{0pt}{1\baselineskip}{0.3\baselineskip}
+
+% Dot after section number and space between section number and title
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname.\ }
+\makeatother
+
+% Radiobuttons on front page
+\usepackage{tikz}
+\makeatletter
+\newcommand*{\radiobutton}{%
+  \@ifstar{\@radiobutton0}{\@radiobutton1}%
+}
+\newcommand*{\@radiobutton}[1]{%
+  \begin{tikzpicture}
+    \pgfmathsetlengthmacro\radius{height("X")/2}
+    \draw[radius=\radius] circle;
+    \ifcase#1 \fill[radius=.6*\radius] circle;\fi
+  \end{tikzpicture}%
+}
+\makeatother
+
+\newcommand{\PartName}{}
+\newcommand{\Part}[1]
+ {\renewcommand{\PartName}{#1}
+  \clearpage%
+  \setcounter{section}{0}%
+  %\setcounter{page}{1}%
+  \noindent%
+  \textbf{#1}%
+  \vspace{3pt}%
+  \noindent}
+
+\newcommand{\instructions}[1]
+ {\ifthenelse{\isundefined{\draft}}
+   {}
+   {{\color{dark} \small #1} \smallskip\par}}
+
+
+%% Headers and footers
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{\headrulewidth}
+\lhead{}
+\rhead{{\small ARG No.: \proposalNo}}
+\lfoot{{\small\textbf{ARG 2\textsuperscript{nd} Cycle Research Plan Form {\color{red}(Rev. March 2024)}}}}
+\cfoot{}
+\rfoot{{\small\textbf{Page \thepage}}}
+
+%% For tables
+\renewcommand{\arraystretch}{1.5}
+\newcolumntype{P}[1]{m{\dimexpr #1\textwidth-2\tabcolsep}}
+% Vertically centered wrapping columns
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+% Vertically and horizontally centered wraping columns
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\definecolor{headercolor}{gray}{.8}
+\colorlet{wpcolor}{blue!20}
+\colorlet{taskcolor}{red!20}
+\newlength{\realwidth}

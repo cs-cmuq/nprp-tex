@@ -1,0 +1,317 @@
+\documentclass[11pt]{qrdi-arg}
+
+\newcommand{\PI}{}
+\newcommand{\proposalNo}{ARGXX-YYYY-ZZZZZZ}
+\newcommand{\proposalTitle}{Title}
+
+\input{arg-macros}
+
+%\newcommand{\draft}{}  % Remove for final version -- removing now to have an idea of number of pages
+%\definecolor{red}{gray}{.7}
+
+\usepackage{tabularx,ragged2e,booktabs}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.5\hsize}X}
+
+
+%#############################################################################
+%Document starts here
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+\textbf{\Large{ACADEMIC RESEARCH GRANT}}
+\end{center}
+\vspace{5mm}
+
+%The first table in the ARG template
+\begin{table}[h]
+\setlength\tabcolsep{5pt}
+\centering
+\fontsize{11pt}{11pt}\selectfont
+\renewcommand{\arraystretch}{3}
+\noindent\begin{tabular}{|p{2.06in}| lll|}
+\hline
+\textbf{ARG ID}                             & \multicolumn{3}{l|}{\proposalNo}    \\ \hline
+\textbf{Project title in English}           & \multicolumn{3}{p{4.71in}|}{\proposalTitle}    \\ \hline
+\textbf{Project title in Arabic (optional)} & \multicolumn{3}{l|}{}    \\ \hline
+\textbf{Type of Application}                & \multicolumn{3}{l|}{\radiobutton* \hspace{0.01in}  New} \\
+                                            & \multicolumn{3}{l|}{\radiobutton \hspace{0.01in} Resubmission} \\ \hline
+\textbf{Submitting Institution}             & \multicolumn{3}{l|}{Carnegie Mellon University in Qatar}    \\ \hline
+\textbf{Lead PI (title, name, position)}    & \multicolumn{3}{l|}{Dr. Alan Turing}    \\ \hline 
+\textbf{List of participants (PI name, collaborative institutions, PI residency)} & \multicolumn{3}{l|}{ 
+\renewcommand{\arraystretch}{1.7}
+\setlength\extrarowheight{3pt}
+
+\begin{tabular}[t]{|p{1.3in}|p{1.3in}|p{1.3in}|}
+\hline 
+PI name & PI Institution & PI residency \\ \hline
+Dr. Ada Lovelace & University College London          & UK     \\ \hline
+Dr. Marie Curie & Universit\'{e} Sorbonne Paris Nord & France \\ \hline
+\end{tabular} } \\[18ex] 
+\hline
+\textbf{Total funding requested} & \multicolumn{1}{l|}{XXX,XXX USD} & \multicolumn{1}{l|}{\makecell{\textbf{Project} \\\textbf{duration}}} & XX months \\ 
+\hline
+\end{tabular}
+\end{table}
+
+%###########################################################################################
+%###########################################################################################
+%Add the table of contents to a new page in the template
+\newpage
+\tableofcontents
+
+\instructions{
+\begin{itemize}
+  \item The research plan should describe the proposed research and
+  its intended outcomes. It should cover the context, importance,
+  methodology and all the associated work and activities you propose
+  to carry out that will make this a high-quality research project.
+
+  \item This document is the principal opportunity to explain to
+  reviewers why your proposal should be  supported.
+\end{itemize}
+
+Before submitting this document:
+\begin{itemize}
+  \item Remove all the instructions in red.
+  
+  \item Update the table of contents (right click on table of
+  contents-> Update Field-> Update the entire table).
+
+  \item This document must not exceed 10 pages excluding cover page,
+  table of contents and references, body of text in regular black
+  Arial font size 11, single space and the margins as identified in
+  the template (no less than 0.5 inches).
+
+  \item In case of resubmission, the rebuttal section should not
+  exceed 1.5 pages and is not included in the total page count.
+
+  \item Appendices should be added under the ``Miscellaneous
+  Document'' section on the system.
+
+  \item Make sure that the information on the cover page matches the
+  information entered on the system.
+\end{itemize}
+
+All sections are mandatory unless marked ``if applicable''. Extra
+sections should not be added. We recommend that you follow the
+sub-sections indicated in the template. However, you are free to adapt
+the structure of the sub-sections according to your  needs.
+Applications that do not comply with the instructions may not be
+accepted for review.
+}
+\newpage
+
+
+
+%###########################################################################################
+%###########################################################################################
+
+\noindent 
+\Part{Research Plan }
+\setcounter{section}{-1}
+
+\section{PROPOSAL SUMMARY}
+
+\instructions{Please describe in up to 500 words the nature
+of the proposed research project. This should be in plain English and
+should cover the following items: What are the scientific objectives
+of this project? What does your team seek to do and how will you do
+it? What are the expected outcomes of the project? What is its
+expected impact?}
+
+%\input{summary}
+
+
+%###########################################################################################
+%###########################################################################################
+
+% \section{REBUTTAL (If Applicable)}
+% \label{sec:reb}
+% 
+% \instructions{If this proposal is a resubmission, include
+% here the questions \& responses to previous peer reviewers’ comments
+% and identify the substantive changes incorporated in the research
+% plan.  In addition, LPIs resubmitting proposals must point out in the
+% body of this research plan (e.g. in bold type, line in the margin,
+% underlining, italic, etc.) all revisions and modifications made in
+% response to the PRs’ comments.}
+
+%###########################################################################################
+%###########################################################################################
+
+\section{INTRODUCTION}
+\label{sec:intro}
+
+%--------------------------------------------------------------------------------------------
+
+\subsection{BACKGROUND AND PRELIMINARY DATA}
+\label{sec:intro:back}
+
+\instructions{Provide details on preliminary data related to
+this proposal and on related research projects (ongoing or previous)
+by members of the research team, including QNRF projects (if any).
+Indicate any output (patents, publications, products, data sets, etc.)
+obtained from those projects.}
+
+%\input{back-prelim}
+
+%--------------------------------------------------------------------------------------------
+
+\subsection{RESEARCH HYPOTHESIS AND OBJECTIVES}
+\label{sec:intro:hyp&obj}
+
+\instructions{State the objectives and hypothesis of your
+proposal and your research approach. Explain the novelty, originality,
+creativity, and, potentially transformative, aspects of your
+proposal.}
+
+%\input{hyp-objectives}
+
+%--------------------------------------------------------------------------------------------
+
+\subsection{EXPECTED OUTCOME AND IMPACT OF THE PROJECT}
+\label{sec:intro:out}
+
+\instructions{Describe how the outcomes of this proposal
+would create or advance knowledge and enhance understanding of
+existing knowledge. Explain to what extent your proposal will support
+the RDI national priority areas
+(\href{Link}{https://qrdi.org.qa/en-us/Strategic-Focus}) and educate
+the next generation of scientists.}
+
+%\input{outcome-impact}
+
+%###########################################################################################
+%###########################################################################################
+
+\section{WORK PLAN}
+\label{sec:workplan}
+
+%--------------------------------------------------------------------------------------------
+
+\subsection{METHODOLOGY}
+\label{sec:workplan:meth}
+
+\instructions{Clearly describe and explain your methodology,
+including techniques, procedures, and tools to be used.}
+
+%\input{methodology}
+
+%------------------------------------------------------------------------------------------
+
+\subsection{TECHNICAL DESCRIPTION BY WORK PACKAGE}
+\label{sec:workplan:wps}
+
+\instructions{Please enter your WPs details as per the table
+below. Repeat for each WP.}
+
+%\input{work-packages}
+
+\subsection{PROJECT TIMELINE}
+\label{sec:workplan:timeline}
+\noindent
+
+\instructions{Indicate in the table below the timeline for
+each WP and task(T) as per the previous section. Highlight cells of
+the month(s) and year(s) of each WP and associated tasks (T).}
+\vspace{-0.2in}
+\input{timeline}
+
+
+%###########################################################################################
+%###########################################################################################
+
+\section{PROJECT MANAGEMENT}
+\label{sec:management}
+\noindent
+
+\instructions{Describe how the project is managed and co-ordinated
+among the various collaborators.  Identify the main risks and outline
+mitigation plans. Risks include threats to health and safety to
+researchers and subjects of research, delays, for example, in
+recruitment (researchers, students, patients, etc.) or procurement, or
+in obtaining regulatory (e.g., ethical) permissions. Risks could also
+be scientific, such as degrees of certainty, long execution times of
+codes or malfunction of equipment and facilities. You should describe
+the nature and degree of risk, its likelihood of occurrence, and
+outline plans of mitigating it.}
+
+The research team will hold weekly meetings to discuss the progress of
+the project, exchange ideas, and coordinate deliverables, including
+deciding about publication venues. The lead PI and PIs will meet in
+person twice a year, once in Europe and once in Qatar, to have a more
+intensive and concentrated work period.
+
+There are two potential risks for the project development: (1) hiring
+delays and (2) impossibility results. Regarding (1), all institutions
+involved in the project are renown research institutions used to
+hiring personnel in their countries. We do not expect this to be an
+issue and, if it happens, we can delay certain deliverables and work
+on other fronts. Regarding (2), in such foundational and exploratory
+work, there is always the risk of finding out that what we proposed to
+do cannot be fully done. However, impossibility results are also
+valuable and can be published to indicate the limitations of a
+technique.
+
+%------------------------------------------------------------------------------------------
+
+\subsection{SYNERGY AND RELEVANCE OF THE RESEARCH TEAM}
+\label{sec:management:synergy}
+\noindent
+
+\instructions{Show how team members complement each other’s
+expertise and describe the added value of the collaborations, with a
+special emphasis on the contribution by the LPI and his/her team (KIs,
+unnamed roles, consultants). Interdisciplinarity and the inclusion of
+specific research teams must be justified in accordance with the
+project objectives.}
+
+%\input{team}
+
+%------------------------------------------------------------------------------------------
+
+\subsection{ETHICAL AND REGULATORY REQUIREMENTS}
+\label{sec:management:ethical}
+\noindent
+
+\instructions{This section is required for all proposals
+involving research on human subjects, research animals, biohazardous
+materials and/or recombinant nucleic acids. Applicants must provide
+sufficient information here to allow the reviewers to determine if the
+involvement of human subjects and/or if the use of research animals
+and/or biohazardous materials and/or nucleic acids are appropriate. In
+addition, applicants must demonstrate how the proposal takes the
+appropriate measures to ensure the protection of human subjects and/or
+ensures the appropriate care and use of research animals as
+applicable. The proposal must meet all the requirements set by the
+applicable Ministry of Public Health policies for the protection of
+human subjects, care and use of research animals, and/or use of
+biohazardous materials and/or nucleic acids which can be found here.
+Applicants are encouraged to consult with their institution’s research
+compliance office before submitting their proposals. }
+
+%------------------------------------------------------------------------------------------
+
+\subsection{DISSEMINATION AND IMPLEMENTATION OF RESULTS}
+\label{sec:management:diss&impl}
+\noindent
+
+\instructions{Describe plans to disseminate and, where
+applicable, implement the project’s results and outcomes.}
+
+%------------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------
+\newpage
+\section{REFERENCES}
+\noindent
+\bibliographystyle{unsrt}
+\bibliography{refs}
+
+\instructions{Include the list of bibliographic references used in the research plan.}
+
+\end{document}
+
